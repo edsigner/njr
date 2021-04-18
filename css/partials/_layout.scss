@@ -1,0 +1,180 @@
+.container{
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 36px 16px;
+    
+    height: 80vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    @include responsive(){
+        flex-direction: column;
+        height: auto;
+    }
+}
+.container-item-1{
+    max-width: 540px;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.flex{
+    display: flex;
+}
+.align-items-center{
+    align-items: center;
+}
+
+.w-auto{
+    width: auto;
+}
+
+.container-item-2{
+    display: flex;
+}
+
+.neymar{
+    width: 100%;
+    transform: translate3d(0px,0,0);
+}
+
+.btn{
+    display: inline-block;
+    padding: 12px 32px;
+    border-radius: 3px;
+    transform: skewX(-10deg);
+    text-transform: uppercase;
+    background-color: $red;
+    position: relative;
+    transition: .7s ease;
+
+    &::after{
+        content: '';
+        position:absolute;
+        opacity: 0;
+        top:-2px;
+        left: -2px;
+        display: block;
+        width: 30%;
+        height: 70%;
+        border-radius: 3px;
+        transition: .7s ease;
+        border-top:3px solid $white;
+        border-left:3px solid $white;
+
+    }
+    &::before{
+        content: '';
+        position:absolute;
+        opacity: 0;
+        bottom:-2px;
+        right: -2px;
+        display: block;
+        width: 30%;
+        height: 70%;
+        border-radius: 3px;
+        transition: .7s ease;
+        border-bottom:3px solid $white;
+        border-right:3px solid $white;
+    }
+    &:hover{
+        transform: skewX(-10deg) scale(1.05);
+        &::after{
+            opacity: 1;
+        }
+        &::before{
+            opacity: 1;
+        }
+    }
+}
+
+.btn-secundary{
+    display: inline-block;
+    padding: 10px 32px;
+    border-radius: 3px;
+    border:2px solid $red;
+    transform: skewX(-10deg);
+    text-transform: uppercase;
+    background-color: transparent;
+    position: relative;
+    transition: .7s ease;
+
+    &::after{
+        content: '';
+        display: block;
+        position: absolute;
+        z-index: -1;
+        top:0;
+        left:0;
+        width: 0%;
+        height: 100%;
+        transition: .7s ease;
+        background-color: $red;
+    }
+    &:hover{
+        transform: skewX(-10deg) scale(1.05);
+        &::after{
+            
+            width: 100%;
+            
+        }
+    }
+}
+
+.bg-video{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &::after{
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top:0;
+        left: 0;
+        display: block;
+
+        background: linear-gradient(105.6deg, #000000 0.32%, rgba(0, 0, 0, 0) 45.58%, #000000 90.83%);
+
+        @include responsive(){
+            position: fixed;
+            
+        }
+    }
+}
+.video{
+    width: 100%;
+    opacity: 0.2;
+    filter: blur(5px);
+
+    @include responsive(){
+        position: fixed;
+        width: auto;
+        height: 100%;
+    }
+}
+
+.bg-loader{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:0;
+    left: 0;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $red-dark;
+    overflow: hidden;
+}

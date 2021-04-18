@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neymar Project</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet"> 
+    <script src="js/svg-inject.min.js"></script>
+</head>
+<body>
+
+    <!--Loading-->
+    <section class="bg-loader">
+        <svg style="max-width:144px;" viewBox="0 0 212 196" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g id="logo-neymar">
+                <path class="logo-neymar" d="M0 48.3311V21.2389L32.2132 0H49.2474V21.2389L81.4606 0H98.6635V123.253H81.4606V26.4232L49.2474 48.3311V123.253H32.2132V26.4232L0 48.3311Z M113.505 169.911V0H130.877V196H113.505L81.4606 174.259V147.836L113.505 169.911Z M145.55 123.253V0H163.259V21.2389L194.797 0H212V50.1706H194.797V26.4232L163.259 48.3311V123.253H145.55Z" fill="white"/>
+            </g>
+        </svg>
+            
+    </section>
+    <!--Header-->
+    <header>
+        <nav class="navbar">
+            <div class="nav-menu">
+                <div class="logo pl-2">
+                    <img src="svg/logo-neymar.svg" onload="SVGInject(this)" />
+                </div>
+                <ul class="nav-list">
+                    <li><a href="" class="nav-link">Home</a></li>
+                    <li><a href="" class="nav-link">Trajeória</a></li>
+                    <li><a href="" class="nav-link">Gols</a></li>
+                    <li><a href="" class="nav-link">#BeYourself</a></li>
+                </ul>
+            </div>
+            <div class="nav-social pr-2">
+                <img src="svg/facebook.svg" onload="SVGInject(this)" />
+                <img src="svg/instagram.svg" onload="SVGInject(this)" />
+                <img src="svg/youtube.svg" onload="SVGInject(this)" />
+            </div>
+            <div class="bx mr-2"></div>
+        </nav>
+    </header>
+
+    <!--BG Video-->
+    <section class="bg-video">
+        <video class="video" autoplay muted loop>
+            <source src="video/video-bg.m4v" type="video/mp4">
+        </video>
+    </section>
+
+    <!--Container-->
+    <section class="container">
+        <div class="container-item-1">
+            <div class="py-2 item-1">
+                <img src="svg/paitaon.svg" onload="SVGInject(this)" />
+            </div>
+            <p class="py-2 item-2">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Integer varius odio justo, vel elementum elit egestas pharetra.
+                Proin auctor non ipsum nec aliquet. Vestibulum et rutrum lectus.
+            </p>
+            <div class="py-2 item-3">
+                <a href="" class="btn mr-2">Jogue comigo!</a>
+                <a href="" class="btn-secundary">Melhores momentos</a>
+            </div>
+            <div class="flex align-items-center my-2 item-4">
+                <img src="svg/psg.svg" class="w-auto mr-2" onload="SVGInject(this)" />
+                <img src="svg/nike.svg" class="w-auto" onload="SVGInject(this)" />
+            </div>
+        </div>
+        <div class="container-item-2 item-5">
+            <div class="js-tilt">
+                <img src="images/neymar-foto.png" class="neymar" alt="">
+            </div>
+        </div>
+    </section>
+
+    <!-- JS -->
+    <script src="js/app.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js"></script>
+    <script>
+        $('.js-tilt').tilt({
+            perspective: 2000,
+            scale: 1.01
+        });
+    </script>
+</body>
+</html>
